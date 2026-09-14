@@ -92,13 +92,13 @@
     // --- CONFIGURAÇÕES DE CONEXÃO ---
     // Substitua pelo IP do notebook onde o Mosquitto está rodando
     const connectionParams = new URLSearchParams(window.location.search);
-    const MQTT_HOST = connectionParams.get("mqttHost") || window.location.hostname || "10.136.42.68";
+    const MQTT_HOST = connectionParams.get("mqttHost") || window.location.hostname || "10.0.0.94";
     const MQTT_PORT = Number(connectionParams.get("mqttPort") || 9001); // Porta WebSocket do Mosquitto
 
     // Tópicos exatos publicados pelo ESP32
-    const TOPIC_TEMP = "luiz/temperatura";
-    const TOPIC_HUM  = "Luiz/umidade";
-    const TOPIC_AIR  = "Luiz/qualidade_ar";
+    const TOPIC_TEMP = "aulas/luiz/temperatura";
+    const TOPIC_HUM  = "aulas/luiz/umidade";
+    const TOPIC_AIR  = "aulas/luiz/qualidade_ar";
 
     // Criação do ID de Cliente único para o navegador
     const clientID = "WebDash_" + Math.random().toString(16).substr(2, 8);
