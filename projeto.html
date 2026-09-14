@@ -1,0 +1,488 @@
+```html
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sobre o Projeto | Estação IoT</title>
+
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+
+    <!-- CABEÇALHO -->
+    <header class="cabecalho">
+
+        <div class="logo">
+            <span>IoT</span>
+            <h1>Estação de Monitoramento</h1>
+        </div>
+
+        <nav class="menu">
+            <a href="projeto.html" class="ativo">Sobre o Projeto</a>
+            <a href="index.html">Dashboard Ao Vivo</a>
+        </nav>
+
+    </header>
+
+
+    <!-- CONTEÚDO PRINCIPAL -->
+    <main>
+
+        <!-- APRESENTAÇÃO -->
+        <section class="hero">
+
+            <div class="hero-texto">
+
+                <span class="tag">PROJETO IoT</span>
+
+                <h2>
+                    Estação de<br>
+                    Monitoramento Ambiental
+                </h2>
+
+                <p>
+                    Uma solução IoT desenvolvida com ESP32 para
+                    monitorar temperatura, umidade e qualidade do ar
+                    em tempo real através de um Dashboard Web.
+                </p>
+
+                <a href="#funcionamento" class="botao">
+                    Conheça o projeto
+                </a>
+
+            </div>
+
+            <div class="hero-card">
+                <div class="icone-iot">⚡</div>
+
+                <h3>Monitoramento em tempo real</h3>
+
+                <p>
+                    Os sensores enviam informações para o ESP32,
+                    que transmite os dados através do protocolo MQTT.
+                </p>
+            </div>
+
+        </section>
+
+
+        <!-- OBJETIVO -->
+        <section class="secao" id="funcionamento">
+
+            <div class="titulo-secao">
+                <span>01</span>
+
+                <div>
+                    <small>SOBRE O PROJETO</small>
+                    <h2>Qual é o objetivo?</h2>
+                </div>
+            </div>
+
+            <article class="texto-projeto">
+
+                <p>
+                    O objetivo do projeto é desenvolver uma estação de
+                    monitoramento capaz de coletar informações do ambiente
+                    utilizando sensores conectados a um ESP32.
+                </p>
+
+                <p>
+                    Os dados de temperatura, umidade e qualidade do ar
+                    são enviados pela rede Wi-Fi para um servidor MQTT.
+                    Depois disso, essas informações são disponibilizadas
+                    em um Dashboard Web, permitindo acompanhar os valores
+                    em tempo real.
+                </p>
+
+                <p>
+                    O sistema também possui LEDs de alerta, que são
+                    acionados quando os valores dos sensores ultrapassam
+                    os limites definidos no projeto.
+                </p>
+
+            </article>
+
+        </section>
+
+
+        <!-- IMAGENS -->
+        <section class="secao">
+
+            <div class="titulo-secao">
+                <span>02</span>
+
+                <div>
+                    <small>REGISTROS</small>
+                    <h2>Nosso projeto</h2>
+                </div>
+            </div>
+
+
+            <div class="galeria">
+
+                <article class="imagem-card">
+
+                    <img src="img/projeto1.jpg"
+                         alt="Montagem da estação IoT">
+
+                    <div>
+                        <h3>Estação IoT</h3>
+                        <p>
+                            ESP32 conectado aos sensores e LEDs
+                            responsáveis pelo monitoramento.
+                        </p>
+                    </div>
+
+                </article>
+
+
+                <article class="imagem-card">
+
+                    <img src="img/projeto2.jpg"
+                         alt="Sensores utilizados no projeto">
+
+                    <div>
+                        <h3>Sensores</h3>
+                        <p>
+                            DHT11 e MQ-135 utilizados para coletar
+                            informações do ambiente.
+                        </p>
+                    </div>
+
+                </article>
+
+
+                <article class="imagem-card">
+
+                    <img src="img/projeto3.jpg"
+                         alt="Dashboard do projeto IoT">
+
+                    <div>
+                        <h3>Dashboard</h3>
+                        <p>
+                            Interface Web responsável por apresentar
+                            os dados recebidos em tempo real.
+                        </p>
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- HARDWARE -->
+        <section class="secao">
+
+            <div class="titulo-secao">
+                <span>03</span>
+
+                <div>
+                    <small>HARDWARE</small>
+                    <h2>Componentes utilizados</h2>
+                </div>
+            </div>
+
+
+            <div class="cards">
+
+                <article class="card">
+
+                    <div class="card-icone">⚙️</div>
+
+                    <h3>ESP32</h3>
+
+                    <p>
+                        Microcontrolador responsável por controlar os
+                        sensores, LEDs, conexão Wi-Fi e comunicação MQTT.
+                    </p>
+
+                </article>
+
+
+                <article class="card">
+
+                    <div class="card-icone">🌡️</div>
+
+                    <h3>DHT11</h3>
+
+                    <p>
+                        Sensor responsável pela medição da temperatura
+                        e da umidade relativa do ambiente.
+                    </p>
+
+                </article>
+
+
+                <article class="card">
+
+                    <div class="card-icone">💨</div>
+
+                    <h3>MQ-135</h3>
+
+                    <p>
+                        Sensor utilizado para realizar a leitura
+                        relacionada à qualidade do ar e presença de gases.
+                    </p>
+
+                </article>
+
+
+                <article class="card">
+
+                    <div class="card-icone">🚨</div>
+
+                    <h3>LEDs de alerta</h3>
+
+                    <p>
+                        Indicadores físicos acionados quando os valores
+                        dos sensores ultrapassam os limites definidos.
+                    </p>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ALERTAS -->
+        <section class="secao alertas">
+
+            <div class="titulo-secao">
+                <span>04</span>
+
+                <div>
+                    <small>MONITORAMENTO</small>
+                    <h2>Limites de alerta</h2>
+                </div>
+            </div>
+
+
+            <div class="tabela-alertas">
+
+                <div class="alerta-item">
+                    <strong>🌡️ Temperatura</strong>
+                    <span>Alerta acima de 28 °C</span>
+                </div>
+
+                <div class="alerta-item">
+                    <strong>💧 Umidade</strong>
+                    <span>Alerta acima de 56%</span>
+                </div>
+
+                <div class="alerta-item">
+                    <strong>💨 Qualidade do ar</strong>
+                    <span>Alerta acima de 400</span>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ARQUITETURA -->
+        <section class="secao">
+
+            <div class="titulo-secao">
+                <span>05</span>
+
+                <div>
+                    <small>ARQUITETURA</small>
+                    <h2>Como o sistema funciona?</h2>
+                </div>
+            </div>
+
+
+            <div class="arquitetura">
+
+                <div class="etapa">
+                    <span>01</span>
+                    <h3>Sensores</h3>
+                    <p>
+                        Os sensores realizam a coleta das informações
+                        do ambiente.
+                    </p>
+                </div>
+
+
+                <div class="linha">→</div>
+
+
+                <div class="etapa">
+                    <span>02</span>
+                    <h3>ESP32</h3>
+                    <p>
+                        O ESP32 recebe e processa os valores coletados.
+                    </p>
+                </div>
+
+
+                <div class="linha">→</div>
+
+
+                <div class="etapa">
+                    <span>03</span>
+                    <h3>MQTT</h3>
+                    <p>
+                        Os dados são publicados no broker Mosquitto.
+                    </p>
+                </div>
+
+
+                <div class="linha">→</div>
+
+
+                <div class="etapa">
+                    <span>04</span>
+                    <h3>Dashboard</h3>
+                    <p>
+                        A página Web recebe e apresenta os dados
+                        em tempo real.
+                    </p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- TÓPICOS MQTT -->
+        <section class="secao mqtt">
+
+            <div class="titulo-secao">
+                <span>06</span>
+
+                <div>
+                    <small>COMUNICAÇÃO</small>
+                    <h2>Tópicos MQTT</h2>
+                </div>
+            </div>
+
+
+            <article class="mqtt-box">
+
+                <p>
+                    Os dados dos sensores são publicados pelo ESP32
+                    utilizando tópicos MQTT específicos:
+                </p>
+
+                <code>
+                    aulas/professortupi/temperatura
+                </code>
+
+                <code>
+                    aulas/professortupi/umidade
+                </code>
+
+                <code>
+                    aulas/professortupi/qualidade_ar
+                </code>
+
+            </article>
+
+        </section>
+
+
+        <!-- TECNOLOGIAS -->
+        <section class="secao">
+
+            <div class="titulo-secao">
+                <span>07</span>
+
+                <div>
+                    <small>TECNOLOGIAS</small>
+                    <h2>Tecnologias utilizadas</h2>
+                </div>
+            </div>
+
+
+            <div class="tecnologias">
+
+                <span>ESP32</span>
+                <span>Arduino</span>
+                <span>Wi-Fi</span>
+                <span>MQTT</span>
+                <span>Mosquitto</span>
+                <span>WebSockets</span>
+                <span>Paho MQTT</span>
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- RODAPÉ -->
+    <footer>
+
+        <div class="footer-principal">
+
+            <div>
+                <span class="footer-logo">IoT</span>
+
+                <h3>
+                    Estação de Monitoramento
+                </h3>
+
+                <p>
+                    Projeto desenvolvido para a disciplina
+                    de Internet das Coisas.
+                </p>
+            </div>
+
+
+            <div class="integrantes">
+
+                <h3>Integrantes</h3>
+
+                <p>
+                    Danilo Carneiro Casas Brustolin
+                </p>
+
+                <p>
+                    Leonardo Nunes Barbosa
+                </p>
+
+                <p>
+                    Luiz Guilherme Vigo Koppe
+                </p>
+
+
+            </div>
+
+
+            <div class="grupo">
+
+                <h3>Equipe</h3>
+
+                <p>Grupo 01: Mens Caves</p>
+                <p>Turma 3º A</p>
+                <p>SESI SENAI Vinhedo</p>
+
+            </div>
+
+        </div>
+
+
+        <div class="banner-final">
+            Projeto IOT SESI SENAI Vinhedo Grupo XX
+        </div>
+
+    </footer>
+
+
+    <script src="index.js"></script>
+
+</body>
+
+</html>
