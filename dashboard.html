@@ -149,7 +149,7 @@
       }
     }
 
-    // Processa as mensagens recebidas nos tópicos assinados
+   // Processa as mensagens recebidas através dos tópicos subscritos/assinados.
     function onMessageArrived(message) {
       const topic = message.destinationName;
       const payload = message.payloadString;
