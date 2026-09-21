@@ -39,6 +39,25 @@
     .value { font:600 clamp(42px,5vw,64px)/1 'Space Grotesk',sans-serif; }.unit { color:var(--muted); font-size:16px; }.card:nth-child(2) .unit { color:#b9d7c3; }
     .dashboard-footer { display:flex; justify-content:space-between; gap:16px; margin-top:28px; color:var(--muted); font-size:12px; }
     @media (max-width:760px) { .dashboard-topbar,.dashboard-intro { align-items:flex-start; flex-direction:column; }.dashboard-topbar { margin-bottom:48px; }.dashboard-nav { width:100%; justify-content:space-between; }.cards-container { grid-template-columns:1fr; } }
+      .navegacao {
+            display: flex;
+            gap: 30px;
+        }
+        .navegacao a {
+            color: #6b7280;
+            text-decoration: none;
+            font-size: 13px;
+            font-weight: 600;
+            padding: 28px 0;
+            border-bottom: 2px solid transparent;
+            transition: 0.2s;
+        }
+        .navegacao a:hover,
+        .navegacao a.ativo {
+            color: #111827;
+            border-bottom-color: #111827;
+        }
+
   </style>
 </head>
 <body class="dashboard-page">
@@ -49,10 +68,17 @@
         <span class="dashboard-brand-mark">IoT</span>
         <span>Estação de Monitoramento</span>
       </a>
-      <nav class="dashboard-nav" aria-label="Navegação principal">
-        <a href="index.html">Sobre o projeto</a>
-        <a class="active" href="dashboard.html">Dashboard ao vivo</a>
-      </nav>
+           <nav class="navegacao">
+            <a href="index.html" class="ativo">
+                Sobre o Projeto
+            </a>
+            <a href="dashboard.html">
+                Dashboard Ao Vivo
+            </a>
+         <a href="projeto.html">
+                Projeto
+            </a>
+        </nav>
     </div>
 
     <div class="dashboard-intro">
