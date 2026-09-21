@@ -45,9 +45,8 @@
                 </h2>
 
                 <p>
-                    Uma solução IoT desenvolvida com ESP32 para monitorar
-                    temperatura, umidade e qualidade do ar em tempo real
-                    através de um Dashboard Web.
+                    Este projeto foi pensado para acompanhar as condições do ambiente em tempo real,
+                    usando sensores conectados ao ESP32 e exibindo os dados em um dashboard web.
                 </p>
 
                 <a href="#funcionamento" class="botao">
@@ -59,13 +58,11 @@
 
             <div class="hero-card">
 
-                <div class="icone-iot">⚡</div>
-
                 <h3>Monitoramento em tempo real</h3>
 
                 <p>
-                    Os sensores enviam informações para o ESP32,
-                    que transmite os dados através do protocolo MQTT.
+                    Os sensores captam as informações do ambiente e enviam para o ESP32,
+                    que as publica por meio do protocolo MQTT para o sistema em tempo real.
                 </p>
 
             </div>
@@ -91,23 +88,19 @@
             <article class="texto-projeto">
 
                 <p>
-                    O objetivo do projeto é desenvolver uma estação de
-                    monitoramento capaz de coletar informações do ambiente
-                    utilizando sensores conectados a um ESP32.
+                    A ideia central do projeto é criar uma estação de monitoramento capaz de
+                    acompanhar as condições do ambiente de forma prática e automática.
                 </p>
 
                 <p>
-                    Os dados de temperatura, umidade e qualidade do ar são
-                    enviados pela rede Wi-Fi para um servidor MQTT. Depois
-                    disso, essas informações são disponibilizadas em um
-                    Dashboard Web, permitindo acompanhar os valores em
-                    tempo real.
+                    Com sensores de temperatura, umidade e qualidade do ar, o sistema coleta os dados,
+                    envia esses valores pela rede Wi-Fi e os publica em um broker MQTT. Em seguida,
+                    o dashboard web mostra tudo em tempo real para facilitar a análise.
                 </p>
 
                 <p>
-                    O sistema também possui LEDs de alerta, que são acionados
-                    quando os valores dos sensores ultrapassam os limites
-                    definidos no projeto.
+                    Quando os valores saem do intervalo considerado aceitável, os LEDs de alerta acendem,
+                    avisando visualmente que a situação precisa de atenção.
                 </p>
 
             </article>
@@ -141,8 +134,7 @@
                         <h3>Estação IoT</h3>
 
                         <p>
-                            ESP32 conectado aos sensores e LEDs responsáveis
-                            pelo monitoramento.
+                            O ESP32 conecta os sensores e os indicadores visuais que fazem o monitoramento funcionar.
                         </p>
                     </div>
 
@@ -158,8 +150,7 @@
                         <h3>Sensores</h3>
 
                         <p>
-                            DHT11 e MQ-135 utilizados para coletar informações
-                            do ambiente.
+                            O DHT11 e o MQ-135 foram usados para medir temperatura, umidade e qualidade do ar.
                         </p>
                     </div>
 
@@ -175,8 +166,7 @@
                         <h3>Dashboard</h3>
 
                         <p>
-                            Interface Web responsável por apresentar os dados
-                            recebidos em tempo real.
+                            A interface web reúne os dados recebidos e os apresenta de forma simples e em tempo real.
                         </p>
                     </div>
 
@@ -206,41 +196,32 @@
 
                 <article class="card">
 
-                    <div class="card-icone">⚙️</div>
-
                     <h3>ESP32</h3>
 
                     <p>
-                        Microcontrolador responsável por controlar os
-                        sensores, LEDs, conexão Wi-Fi e comunicação MQTT.
+                        O ESP32 é o cérebro do sistema, controlando sensores, LEDs, conexão Wi-Fi e comunicação MQTT.
                     </p>
 
                 </article>
 
 
                 <article class="card">
-
-                    <div class="card-icone">🌡️</div>
 
                     <h3>DHT11</h3>
 
                     <p>
-                        Sensor responsável pela medição da temperatura
-                        e da umidade relativa do ambiente.
+                        Esse sensor mede a temperatura e a umidade do ambiente, sendo essencial para o monitoramento.
                     </p>
 
                 </article>
 
 
                 <article class="card">
-
-                    <div class="card-icone">💨</div>
 
                     <h3>MQ-135</h3>
 
                     <p>
-                        Sensor utilizado para realizar a leitura relacionada
-                        à qualidade do ar e presença de gases.
+                        O MQ-135 faz a leitura da qualidade do ar e ajuda a identificar variações nas condições ambientais.
                     </p>
 
                 </article>
@@ -248,13 +229,10 @@
 
                 <article class="card">
 
-                    <div class="card-icone">🚨</div>
-
                     <h3>LEDs de alerta</h3>
 
                     <p>
-                        Indicadores físicos acionados quando os valores dos
-                        sensores ultrapassam os limites definidos.
+                        Os LEDs de alerta avisam visualmente quando os valores dos sensores passam dos limites esperados.
                     </p>
 
                 </article>
@@ -336,8 +314,7 @@
                     <h3>Sensores</h3>
 
                     <p>
-                        Os sensores realizam a coleta das informações
-                        do ambiente.
+                        Primeiro, os sensores captam os dados do ambiente para iniciar o ciclo de monitoramento.
                     </p>
 
                 </div>
@@ -353,7 +330,7 @@
                     <h3>ESP32</h3>
 
                     <p>
-                        O ESP32 recebe e processa os valores coletados.
+                        Em seguida, o ESP32 recebe esses valores e organiza os dados para envio.
                     </p>
 
                 </div>
@@ -369,7 +346,7 @@
                     <h3>MQTT</h3>
 
                     <p>
-                        Os dados são publicados no broker Mosquitto.
+                        Depois, os dados são publicados no broker Mosquitto via MQTT.
                     </p>
 
                 </div>
@@ -385,8 +362,7 @@
                     <h3>Dashboard</h3>
 
                     <p>
-                        A página Web recebe e apresenta os dados
-                        em tempo real.
+                        Por fim, a página web recebe esses dados e os mostra em tempo real.
                     </p>
 
                 </div>
@@ -414,8 +390,7 @@
             <article class="mqtt-box">
 
                 <p>
-                    Os dados dos sensores são publicados pelo ESP32
-                    utilizando tópicos MQTT específicos:
+                    O ESP32 publica os dados em tópicos específicos do MQTT, organizados por tipo de informação:
                 </p>
 
                 <code>
@@ -482,8 +457,7 @@
                 <h3>Estação de Monitoramento</h3>
 
                 <p>
-                    Projeto desenvolvido para a disciplina
-                    de Internet das Coisas.
+                    Projeto desenvolvido como parte da disciplina de Internet das Coisas.
                 </p>
 
             </div>
@@ -496,6 +470,8 @@
                 <p>Danilo Carneiro Casas Brustolin</p>
                 <p>Leonardo Nunes Barbosa</p>
                 <p>Luiz Guilherme Vigo Koppe</p>
+                <p>Davi Sanches</p>
+                <p>Gustavo Bonetto</p>
 
             </div>
 
