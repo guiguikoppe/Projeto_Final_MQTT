@@ -7,34 +7,8 @@
 
     <title>Sobre o Projeto | Estação IoT</title>
 
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap');
-        :root { --ink:#15201c; --muted:#68736d; --paper:#f4f6f1; --panel:#fff; --line:#dce3da; --green:#1d6b4f; --green-dark:#123f32; --lime:#c9e86a; --orange:#ef8b4f; }
-        * { box-sizing:border-box; } body { margin:0; min-width:320px; background:var(--paper); color:var(--ink); font-family:'DM Sans',sans-serif; }
-        .cabecalho { background:rgba(255,255,255,.94); border-bottom-color:var(--line); backdrop-filter:blur(12px); }
-        .logo > span,.footer-logo { background:var(--green-dark); color:var(--lime); }.menu { display:flex; gap:30px; }.menu a { padding:28px 0; color:var(--muted); text-decoration:none; font-size:13px; font-weight:700; border-bottom:2px solid transparent; }.menu a:hover,.menu a.ativo { color:var(--green-dark); border-color:var(--green); }
-        .hero { background:var(--green-dark); }.hero h2 strong { color:var(--lime); }.botao { background:var(--green-dark); color:#fff; }.hero-texto { max-width:700px; }.tag { color:var(--lime); font-size:11px; font-weight:700; letter-spacing:.2em; }.hero-card { max-width:300px; padding:30px; border:1px solid rgba(201,232,106,.45); border-radius:16px; color:#fff; }.hero-card p,.hero-texto p { color:#b9d7c3; }
-        .texto-projeto { max-width:760px; color:var(--muted); font-size:17px; }.galeria,.tecnologias,.tabela-alertas { display:grid; grid-template-columns:repeat(3,1fr); gap:24px; }.imagem-card,.card { border:1px solid var(--line); border-radius:12px; background:var(--panel); overflow:hidden; }.imagem-card img { display:block; width:100%; height:220px; object-fit:cover; background:#dce3da; }.imagem-card > div,.card { padding:26px; }.imagem-card p,.card p,.etapa p,.alerta-item span { color:var(--muted); font-size:14px; }.card-icone { font-size:26px; margin-bottom:18px; }.alerta-item { display:flex; flex-direction:column; gap:8px; padding:22px; border-left:3px solid var(--orange); background:var(--panel); }.arquitetura { display:flex; align-items:start; gap:20px; }.etapa { flex:1; }.etapa > span { display:inline-grid; place-items:center; width:40px; height:40px; margin-bottom:18px; border:1px solid var(--green); border-radius:50%; color:var(--green); font-weight:700; }.linha { color:var(--green); font-size:25px; }.mqtt { background:var(--green-dark); color:#fff; }.mqtt-box { max-width:720px; }.mqtt-box p { color:#b9d7c3; }.mqtt-box code { display:block; width:fit-content; margin:12px 0; padding:9px 12px; border-radius:6px; background:#214f40; color:var(--lime); }.tecnologias { grid-template-columns:repeat(5,1fr); }.tecnologias span { padding:16px; border:1px solid var(--line); background:var(--panel); text-align:center; font-weight:700; } footer { background:var(--green-dark); color:#fff; }
-        @media (max-width:760px) { .menu { gap:15px; }.menu a { padding:8px 0; font-size:11px; }.galeria,.tecnologias,.tabela-alertas { grid-template-columns:1fr; }.arquitetura { flex-direction:column; }.linha { transform:rotate(90deg); align-self:center; } }
-      .navegacao {
-            display: flex;
-            gap: 30px;
-        }
-        .navegacao a {
-            color: #6b7280;
-            text-decoration: none;
-            font-size: 13px;
-            font-weight: 600;
-            padding: 28px 0;
-            border-bottom: 2px solid transparent;
-            transition: 0.2s;
-        }
-        .navegacao a:hover,
-        .navegacao a.ativo {
-            color: #111827;
-            border-bottom-color: #111827;
-        }
-    </style>
+    <!-- Conecta o HTML ao arquivo CSS externo -->
+    <link rel="stylesheet" href="projeto.css">
 </head>
 
 <body>
@@ -44,38 +18,25 @@
 
         <div class="logo">
             <span>IoT</span>
-
-            <h1>
-                Estação de Monitoramento
-            </h1>
+            <h1>Estação de Monitoramento</h1>
         </div>
-             <nav class="navegacao">
-            <a href="index.html" class="ativo">
-                Sobre o Projeto
-            </a>
 
-            <a href="dashboard.html">
-                Dashboard Ao Vivo
-            </a>
-         <a href="projeto.html">
-                Projeto
-            </a>
+        <nav class="menu">
+            <a href="projeto.html" class="ativo">Sobre o Projeto</a>
+            <a href="dashboard.html">Dashboard Ao Vivo</a>
         </nav>
 
     </header>
 
 
-    <!-- CONTEÚDO PRINCIPAL -->
     <main>
 
-        <!-- APRESENTAÇÃO -->
+        <!-- HERO -->
         <section class="hero">
 
             <div class="hero-texto">
 
-                <span class="tag">
-                    PROJETO IoT
-                </span>
+                <span class="tag">PROJETO IoT</span>
 
                 <h2>
                     Estação de<br>
@@ -83,9 +44,9 @@
                 </h2>
 
                 <p>
-                    Uma solução IoT desenvolvida com ESP32 para
-                    monitorar temperatura, umidade e qualidade do ar
-                    em tempo real através de um Dashboard Web.
+                    Uma solução IoT desenvolvida com ESP32 para monitorar
+                    temperatura, umidade e qualidade do ar em tempo real
+                    através de um Dashboard Web.
                 </p>
 
                 <a href="#funcionamento" class="botao">
@@ -97,13 +58,9 @@
 
             <div class="hero-card">
 
-                <div class="icone-iot">
-                    ⚡
-                </div>
+                <div class="icone-iot">⚡</div>
 
-                <h3>
-                    Monitoramento em tempo real
-                </h3>
+                <h3>Monitoramento em tempo real</h3>
 
                 <p>
                     Os sensores enviam informações para o ESP32,
@@ -120,20 +77,11 @@
 
             <div class="titulo-secao">
 
-                <span>
-                    01
-                </span>
+                <span>01</span>
 
                 <div>
-
-                    <small>
-                        SOBRE O PROJETO
-                    </small>
-
-                    <h2>
-                        Qual é o objetivo?
-                    </h2>
-
+                    <small>SOBRE O PROJETO</small>
+                    <h2>Qual é o objetivo?</h2>
                 </div>
 
             </div>
@@ -148,17 +96,17 @@
                 </p>
 
                 <p>
-                    Os dados de temperatura, umidade e qualidade do ar
-                    são enviados pela rede Wi-Fi para um servidor MQTT.
-                    Depois disso, essas informações são disponibilizadas
-                    em um Dashboard Web, permitindo acompanhar os valores
-                    em tempo real.
+                    Os dados de temperatura, umidade e qualidade do ar são
+                    enviados pela rede Wi-Fi para um servidor MQTT. Depois
+                    disso, essas informações são disponibilizadas em um
+                    Dashboard Web, permitindo acompanhar os valores em
+                    tempo real.
                 </p>
 
                 <p>
-                    O sistema também possui LEDs de alerta, que são
-                    acionados quando os valores dos sensores ultrapassam
-                    os limites definidos no projeto.
+                    O sistema também possui LEDs de alerta, que são acionados
+                    quando os valores dos sensores ultrapassam os limites
+                    definidos no projeto.
                 </p>
 
             </article>
@@ -166,25 +114,16 @@
         </section>
 
 
-        <!-- IMAGENS -->
+        <!-- REGISTROS -->
         <section class="secao">
 
             <div class="titulo-secao">
 
-                <span>
-                    02
-                </span>
+                <span>02</span>
 
                 <div>
-
-                    <small>
-                        REGISTROS
-                    </small>
-
-                    <h2>
-                        Nosso projeto
-                    </h2>
-
+                    <small>REGISTROS</small>
+                    <h2>Nosso projeto</h2>
                 </div>
 
             </div>
@@ -194,22 +133,16 @@
 
                 <article class="imagem-card">
 
-                    <img
-                        src="img/projeto1.jpg"
-                        alt="Montagem da estação IoT"
-                    >
+                    <img src="img/projeto1.jpg"
+                        alt="Montagem da estação IoT">
 
                     <div>
-
-                        <h3>
-                            Estação IoT
-                        </h3>
+                        <h3>Estação IoT</h3>
 
                         <p>
-                            ESP32 conectado aos sensores e LEDs
-                            responsáveis pelo monitoramento.
+                            ESP32 conectado aos sensores e LEDs responsáveis
+                            pelo monitoramento.
                         </p>
-
                     </div>
 
                 </article>
@@ -217,22 +150,16 @@
 
                 <article class="imagem-card">
 
-                    <img
-                        src="img/projeto2.jpg"
-                        alt="Sensores utilizados no projeto"
-                    >
+                    <img src="img/projeto2.jpg"
+                        alt="Sensores utilizados no projeto">
 
                     <div>
-
-                        <h3>
-                            Sensores
-                        </h3>
+                        <h3>Sensores</h3>
 
                         <p>
-                            DHT11 e MQ-135 utilizados para coletar
-                            informações do ambiente.
+                            DHT11 e MQ-135 utilizados para coletar informações
+                            do ambiente.
                         </p>
-
                     </div>
 
                 </article>
@@ -240,22 +167,16 @@
 
                 <article class="imagem-card">
 
-                    <img
-                        src="img/projeto3.jpg"
-                        alt="Dashboard do projeto IoT"
-                    >
+                    <img src="img/projeto3.jpg"
+                        alt="Dashboard do projeto IoT">
 
                     <div>
-
-                        <h3>
-                            Dashboard
-                        </h3>
+                        <h3>Dashboard</h3>
 
                         <p>
-                            Interface Web responsável por apresentar
-                            os dados recebidos em tempo real.
+                            Interface Web responsável por apresentar os dados
+                            recebidos em tempo real.
                         </p>
-
                     </div>
 
                 </article>
@@ -270,20 +191,11 @@
 
             <div class="titulo-secao">
 
-                <span>
-                    03
-                </span>
+                <span>03</span>
 
                 <div>
-
-                    <small>
-                        HARDWARE
-                    </small>
-
-                    <h2>
-                        Componentes utilizados
-                    </h2>
-
+                    <small>HARDWARE</small>
+                    <h2>Componentes utilizados</h2>
                 </div>
 
             </div>
@@ -293,13 +205,9 @@
 
                 <article class="card">
 
-                    <div class="card-icone">
-                        ⚙️
-                    </div>
+                    <div class="card-icone">⚙️</div>
 
-                    <h3>
-                        ESP32
-                    </h3>
+                    <h3>ESP32</h3>
 
                     <p>
                         Microcontrolador responsável por controlar os
@@ -311,13 +219,9 @@
 
                 <article class="card">
 
-                    <div class="card-icone">
-                        🌡️
-                    </div>
+                    <div class="card-icone">🌡️</div>
 
-                    <h3>
-                        DHT11
-                    </h3>
+                    <h3>DHT11</h3>
 
                     <p>
                         Sensor responsável pela medição da temperatura
@@ -329,17 +233,13 @@
 
                 <article class="card">
 
-                    <div class="card-icone">
-                        💨
-                    </div>
+                    <div class="card-icone">💨</div>
 
-                    <h3>
-                        MQ-135
-                    </h3>
+                    <h3>MQ-135</h3>
 
                     <p>
-                        Sensor utilizado para realizar a leitura
-                        relacionada à qualidade do ar e presença de gases.
+                        Sensor utilizado para realizar a leitura relacionada
+                        à qualidade do ar e presença de gases.
                     </p>
 
                 </article>
@@ -347,17 +247,13 @@
 
                 <article class="card">
 
-                    <div class="card-icone">
-                        🚨
-                    </div>
+                    <div class="card-icone">🚨</div>
 
-                    <h3>
-                        LEDs de alerta
-                    </h3>
+                    <h3>LEDs de alerta</h3>
 
                     <p>
-                        Indicadores físicos acionados quando os valores
-                        dos sensores ultrapassam os limites definidos.
+                        Indicadores físicos acionados quando os valores dos
+                        sensores ultrapassam os limites definidos.
                     </p>
 
                 </article>
@@ -372,20 +268,11 @@
 
             <div class="titulo-secao">
 
-                <span>
-                    04
-                </span>
+                <span>04</span>
 
                 <div>
-
-                    <small>
-                        MONITORAMENTO
-                    </small>
-
-                    <h2>
-                        Limites de alerta
-                    </h2>
-
+                    <small>MONITORAMENTO</small>
+                    <h2>Limites de alerta</h2>
                 </div>
 
             </div>
@@ -395,39 +282,27 @@
 
                 <div class="alerta-item">
 
-                    <strong>
-                        🌡️ Temperatura
-                    </strong>
+                    <strong>🌡️ Temperatura</strong>
 
-                    <span>
-                        Alerta acima de 28 °C
-                    </span>
+                    <span>Alerta acima de 28 °C</span>
 
                 </div>
 
 
                 <div class="alerta-item">
 
-                    <strong>
-                        💧 Umidade
-                    </strong>
+                    <strong>💧 Umidade</strong>
 
-                    <span>
-                        Alerta acima de 56%
-                    </span>
+                    <span>Alerta acima de 56%</span>
 
                 </div>
 
 
                 <div class="alerta-item">
 
-                    <strong>
-                        💨 Qualidade do ar
-                    </strong>
+                    <strong>💨 Qualidade do ar</strong>
 
-                    <span>
-                        Alerta acima de 400
-                    </span>
+                    <span>Alerta acima de 400</span>
 
                 </div>
 
@@ -441,20 +316,11 @@
 
             <div class="titulo-secao">
 
-                <span>
-                    05
-                </span>
+                <span>05</span>
 
                 <div>
-
-                    <small>
-                        ARQUITETURA
-                    </small>
-
-                    <h2>
-                        Como o sistema funciona?
-                    </h2>
-
+                    <small>ARQUITETURA</small>
+                    <h2>Como o sistema funciona?</h2>
                 </div>
 
             </div>
@@ -464,13 +330,9 @@
 
                 <div class="etapa">
 
-                    <span>
-                        01
-                    </span>
+                    <span>01</span>
 
-                    <h3>
-                        Sensores
-                    </h3>
+                    <h3>Sensores</h3>
 
                     <p>
                         Os sensores realizam a coleta das informações
@@ -480,20 +342,14 @@
                 </div>
 
 
-                <div class="linha">
-                    →
-                </div>
+                <div class="linha">→</div>
 
 
                 <div class="etapa">
 
-                    <span>
-                        02
-                    </span>
+                    <span>02</span>
 
-                    <h3>
-                        ESP32
-                    </h3>
+                    <h3>ESP32</h3>
 
                     <p>
                         O ESP32 recebe e processa os valores coletados.
@@ -502,20 +358,14 @@
                 </div>
 
 
-                <div class="linha">
-                    →
-                </div>
+                <div class="linha">→</div>
 
 
                 <div class="etapa">
 
-                    <span>
-                        03
-                    </span>
+                    <span>03</span>
 
-                    <h3>
-                        MQTT
-                    </h3>
+                    <h3>MQTT</h3>
 
                     <p>
                         Os dados são publicados no broker Mosquitto.
@@ -524,20 +374,14 @@
                 </div>
 
 
-                <div class="linha">
-                    →
-                </div>
+                <div class="linha">→</div>
 
 
                 <div class="etapa">
 
-                    <span>
-                        04
-                    </span>
+                    <span>04</span>
 
-                    <h3>
-                        Dashboard
-                    </h3>
+                    <h3>Dashboard</h3>
 
                     <p>
                         A página Web recebe e apresenta os dados
@@ -551,25 +395,16 @@
         </section>
 
 
-        <!-- TÓPICOS MQTT -->
+        <!-- MQTT -->
         <section class="secao mqtt">
 
             <div class="titulo-secao">
 
-                <span>
-                    06
-                </span>
+                <span>06</span>
 
                 <div>
-
-                    <small>
-                        COMUNICAÇÃO
-                    </small>
-
-                    <h2>
-                        Tópicos MQTT
-                    </h2>
-
+                    <small>COMUNICAÇÃO</small>
+                    <h2>Tópicos MQTT</h2>
                 </div>
 
             </div>
@@ -604,20 +439,11 @@
 
             <div class="titulo-secao">
 
-                <span>
-                    07
-                </span>
+                <span>07</span>
 
                 <div>
-
-                    <small>
-                        TECNOLOGIAS
-                    </small>
-
-                    <h2>
-                        Tecnologias utilizadas
-                    </h2>
-
+                    <small>TECNOLOGIAS</small>
+                    <h2>Tecnologias utilizadas</h2>
                 </div>
 
             </div>
@@ -625,45 +451,16 @@
 
             <div class="tecnologias">
 
-                <span>
-                    ESP32
-                </span>
-
-                <span>
-                    Arduino
-                </span>
-
-                <span>
-                    Wi-Fi
-                </span>
-
-                <span>
-                    MQTT
-                </span>
-
-                <span>
-                    Mosquitto
-                </span>
-
-                <span>
-                    WebSockets
-                </span>
-
-                <span>
-                    Paho MQTT
-                </span>
-
-                <span>
-                    HTML
-                </span>
-
-                <span>
-                    CSS
-                </span>
-
-                <span>
-                    JavaScript
-                </span>
+                <span>ESP32</span>
+                <span>Arduino</span>
+                <span>Wi-Fi</span>
+                <span>MQTT</span>
+                <span>Mosquitto</span>
+                <span>WebSockets</span>
+                <span>Paho MQTT</span>
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
 
             </div>
 
@@ -679,13 +476,9 @@
 
             <div>
 
-                <span class="footer-logo">
-                    IoT
-                </span>
+                <span class="footer-logo">IoT</span>
 
-                <h3>
-                    Estação de Monitoramento
-                </h3>
+                <h3>Estação de Monitoramento</h3>
 
                 <p>
                     Projeto desenvolvido para a disciplina
@@ -697,42 +490,22 @@
 
             <div class="integrantes">
 
-                <h3>
-                    Integrantes
-                </h3>
+                <h3>Integrantes</h3>
 
-                <p>
-                    Danilo Carneiro Casas Brustolin
-                </p>
-
-                <p>
-                    Leonardo Nunes Barbosa
-                </p>
-
-                <p>
-                    Luiz Guilherme Vigo Koppe
-                </p>
+                <p>Danilo Carneiro Casas Brustolin</p>
+                <p>Leonardo Nunes Barbosa</p>
+                <p>Luiz Guilherme Vigo Koppe</p>
 
             </div>
 
 
             <div class="grupo">
 
-                <h3>
-                    Equipe
-                </h3>
+                <h3>Equipe</h3>
 
-                <p>
-                    Grupo 01: Mens Caves
-                </p>
-
-                <p>
-                    Turma 3º A
-                </p>
-
-                <p>
-                    SESI SENAI Vinhedo
-                </p>
+                <p>Grupo 01: Mens Caves</p>
+                <p>Turma 3º A</p>
+                <p>SESI SENAI Vinhedo</p>
 
             </div>
 
@@ -744,7 +517,6 @@
         </div>
 
     </footer>
-
 
 </body>
 
