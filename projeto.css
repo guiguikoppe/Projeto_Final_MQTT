@@ -102,7 +102,15 @@ img {
 }
 
 .menu a:hover,
-.menu a.ativo {
+.menu a.ativo,
+.menu a.active {
+    color: var(--green-dark);
+    border-bottom-color: var(--green);
+}
+
+.navegacao a:hover,
+.navegacao a.ativo,
+.navegacao a.active {
     color: var(--green-dark);
     border-bottom-color: var(--green);
 }
