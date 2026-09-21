@@ -213,6 +213,25 @@ h1 {
     font: 600 clamp(42px, 5vw, 64px)/1 'Space Grotesk', sans-serif;
 }
 
+.group-info {
+    margin-top: 18px;
+    padding: 20px 24px;
+    border: 1px solid var(--line);
+    border-radius: 18px;
+    background: var(--panel);
+}
+
+.group-info h2 {
+    margin: 0 0 8px;
+    font: 600 16px 'Space Grotesk', sans-serif;
+}
+
+.group-info p {
+    margin: 0;
+    color: var(--muted);
+    line-height: 1.6;
+}
+
 .unit {
     color: var(--muted);
     font-size: 16px;

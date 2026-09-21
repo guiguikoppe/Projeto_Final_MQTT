@@ -19,8 +19,13 @@ const TOPIC_TEMP = 'aulas/gugu/temperatura';
 const TOPIC_HUM = 'aulas/gugu/umidade';
 const TOPIC_AIR = 'aulas/gugu/qualidade_ar';
 const SENSOR_STORAGE_KEY = 'dashboardSensorData';
+const GROUP_DATA = {
+    name: 'Grupo 01',
+    members: ['Davi Sanches', 'Danilo', 'Gustavo', 'Leonardo', 'Luiz']
+};
 
 const sensorData = loadSensorData();
+localStorage.setItem(SENSOR_STORAGE_KEY, JSON.stringify(sensorData));
 updateDashboard(sensorData);
 
 const clientID = 'WebDash_' + Math.random().toString(16).substr(2, 8);
@@ -88,7 +93,8 @@ function loadSensorData() {
             temperature: '--',
             humidity: '--',
             airQuality: '--',
-            updatedAt: null
+            updatedAt: null,
+            group: GROUP_DATA
         };
     }
 
@@ -98,6 +104,7 @@ function loadSensorData() {
             humidity: '--',
             airQuality: '--',
             updatedAt: null,
+            group: GROUP_DATA,
             ...JSON.parse(storedData)
         };
     } catch (error) {
@@ -110,4 +117,5 @@ function updateDashboard(data) {
     document.getElementById('temp').innerText = data.temperature;
     document.getElementById('hum').innerText = data.humidity;
     document.getElementById('air').innerText = data.airQuality;
+    document.getElementById('group').innerText = `${data.group.name} = [${data.group.members.join('], [')}]`;
 }
