@@ -10,25 +10,23 @@
   </head>
 <body class="dashboard-page">
 
-  <main class="dashboard-shell">
-    <div class="dashboard-topbar">
-      <a class="dashboard-brand" href="index.html">
-        <span class="dashboard-brand-mark">IoT</span>
-        <span>Estação de Monitoramento</span>
-      </a>
-           <nav class="navegacao">
-            <a href="index.html">
-                Sobre o Projeto
-            </a>
-            <a href="dashboard.html" class="ativo">
-                Dashboard Ao Vivo
-            </a>
-         <a href="projeto.html">
-                Projeto
-            </a>
-        </nav>
+  <header class="cabecalho">
+    <div class="logo">
+      <span>IoT</span>
+      <div>
+        <h1>Monitoramento Ambiental</h1>
+        <p>SESI SENAI Vinhedo</p>
+      </div>
     </div>
 
+    <nav class="navegacao">
+      <a href="index.html" data-page="index.html">Sobre o Projeto</a>
+      <a href="dashboard.html" data-page="dashboard.html">Dashboard Ao Vivo</a>
+      <a href="projeto.html" data-page="projeto.html">Projeto</a>
+    </nav>
+  </header>
+
+  <main class="dashboard-shell">
     <div class="dashboard-intro">
       <div>
         <p class="dashboard-kicker">Dados do ambiente / MQTT</p>
