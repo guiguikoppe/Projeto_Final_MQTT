@@ -18,6 +18,10 @@ const MQTT_PORT = Number(connectionParams.get('mqttPort') || 9001);
 const TOPIC_TEMP = 'aulas/gugu/temperatura';
 const TOPIC_HUM = 'aulas/gugu/umidade';
 const TOPIC_AIR = 'aulas/gugu/qualidade_ar';
+const SENSOR_STORAGE_KEY = 'dashboardSensorData';
+
+const sensorData = loadSensorData();
+updateDashboard(sensorData);
 
 const clientID = 'WebDash_' + Math.random().toString(16).substr(2, 8);
 const statusDiv = document.getElementById('status');
@@ -64,10 +68,46 @@ function onMessageArrived(message) {
     const payload = message.payloadString;
 
     if (topic === TOPIC_TEMP) {
-        document.getElementById('temp').innerText = payload;
+        sensorData.temperature = payload;
     } else if (topic === TOPIC_HUM) {
-        document.getElementById('hum').innerText = payload;
+        sensorData.humidity = payload;
     } else if (topic === TOPIC_AIR) {
-        document.getElementById('air').innerText = payload;
+        sensorData.airQuality = payload;
     }
+
+    sensorData.updatedAt = new Date().toISOString();
+    localStorage.setItem(SENSOR_STORAGE_KEY, JSON.stringify(sensorData));
+    updateDashboard(sensorData);
+}
+
+function loadSensorData() {
+    const storedData = localStorage.getItem(SENSOR_STORAGE_KEY);
+
+    if (!storedData) {
+        return {
+            temperature: '--',
+            humidity: '--',
+            airQuality: '--',
+            updatedAt: null
+        };
+    }
+
+    try {
+        return {
+            temperature: '--',
+            humidity: '--',
+            airQuality: '--',
+            updatedAt: null,
+            ...JSON.parse(storedData)
+        };
+    } catch (error) {
+        localStorage.removeItem(SENSOR_STORAGE_KEY);
+        return loadSensorData();
+    }
+}
+
+function updateDashboard(data) {
+    document.getElementById('temp').innerText = data.temperature;
+    document.getElementById('hum').innerText = data.humidity;
+    document.getElementById('air').innerText = data.airQuality;
 }
